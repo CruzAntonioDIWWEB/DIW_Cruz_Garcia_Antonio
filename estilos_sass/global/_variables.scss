@@ -1,0 +1,23 @@
+$breakpoints: (
+    movil: 480px,
+    tableta: 768px,
+    pantalla-peque: 1200px,
+    pantalla-estandar: 1920px,
+    pantalla-grande: 2560px
+);
+
+
+$colores: (
+    color-menu: #afbb9b,
+    color-primario: #A3B18A,
+    color-secundario: #D9CAB3,
+    color-boton: #D95D39,
+    color-neutro-bl: #FFFFFF,
+    color-neutro-gr: #E5E5E5
+);
+
+$tipografias: (
+    fuente-titulos: 'Playfair Display, serif',
+    fuente-texto: 'Roboto, sans-serif',
+    fuente-cta: 'Poppins, sans-serif'
+)

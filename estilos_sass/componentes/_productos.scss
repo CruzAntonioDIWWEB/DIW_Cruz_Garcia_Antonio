@@ -1,0 +1,16 @@
+//Este archivo alberga los estilos de los apartados de productos destacados y novedades dentro de la pagina principal
+@use '../global/variables';
+@use '../global/mixins' as *;
+
+.productos_destacados, .novedades {
+    padding: 2rem;
+    // max-width: 1200px;
+    // margin: 0 auto;
+
+    h2{
+        text-align: center;
+        font-family: map-get(variables.$tipografias, fuente-titulos);
+        color: map-get(variables.$colores, color-primario );
+    }
+
+}

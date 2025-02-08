@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Roboto, sans-serif";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Diferentes puntos de ruptura*/
+/**/
+.cabecera {
+  height: 15vh;
+  background-color: #A3B18A;
+}
+.cabecera .menu_cabecera {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logotipo {
+  width: 60px;
+  position: relative;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logotipo {
+    width: 80px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .logotipo {
+    width: 90px;
+  }
+}
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .logotipo {
+    width: 100px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logotipo {
+    width: 100px;
+  }
+}
+
+.menu_navegacion {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.menu_navegacion a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+.menu_navegacion a:hover {
+  color: #D95D39;
+}
+@media (max-width: 767px) {
+  .menu_navegacion {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .menu_navegacion {
+    display: flex;
+  }
+}
+
+.seccion_heroe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-image: url("../img/hero_image_1_943x455.webp");
+  width: 100%;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+
+.texto_heroe {
+  position: relative;
+  text-align: center;
+  color: #FFFFFF;
+  z-index: 1;
+}
+.texto_heroe h1 {
+  font-family: "Playfair Display, serif";
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .texto_heroe h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .texto_heroe h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1920px) and (max-width: 2559px) {
+  .texto_heroe h1 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 2560px) {
+  .texto_heroe h1 {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .texto_heroe h1 {
+    font-size: 2rem;
+  }
+}
+.texto_heroe h3 {
+  font-family: "Roboto, sans-serif";
+  font-size: 1.5rem;
+}
+
+.productos_destacados, .novedades {
+  padding: 2rem;
+}
+.productos_destacados h2, .novedades h2 {
+  text-align: center;
+  font-family: "Playfair Display, serif";
+  color: #A3B18A;
+}/*# sourceMappingURL=main.css.map */

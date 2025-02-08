@@ -1,0 +1,49 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+//Los puntos de ruputra debo implementarlos
+
+.seccion_heroe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-image: url('../img/hero_image_1_943x455.webp');
+    width: 100%;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+
+.texto_heroe {
+    position: relative;
+    text-align: center;
+    color: map-get(variables.$colores, color-neutro-bl);
+    z-index: 1;
+
+    h1{
+        font-family: map-get(variables.$tipografias, fuente-titulos);
+        font-size: 2.5rem;
+
+        @include puntoRuptura("tableta") {
+            font-size: 3rem;
+        }
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 3.5rem;
+        }
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 4rem;
+        }
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 4.5rem;
+        }
+        @include puntoRuptura("movil") {
+            font-size: 2rem;
+        }
+    }
+
+    h3{
+        font-family: map-get(variables.$tipografias, fuente-texto);
+        font-size: 1.5rem;
+
+    }
+}

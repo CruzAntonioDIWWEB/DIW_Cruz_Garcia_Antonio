@@ -1,0 +1,64 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+
+.cabecera {
+    height: 15vh;
+    background-color: map-get(variables.$colores, color-primario);
+
+    .menu_cabecera {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 1200px; // Establecer un ancho máximo 
+        margin: 0 auto; // Centrar horizontalmente
+        padding: 0 20px;
+    }
+}
+
+    .logotipo {
+        width: 60px; // Tamaño del logo en móviles
+        position: relative;
+
+        @include puntoRuptura("tableta") {
+            width: 80px; // Ajustado para tablets
+        }
+    
+        @include puntoRuptura("pantalla-peque") {
+            width: 90px; // Tamaño ligeramente más grande en pantallas pequeñas
+        }
+        
+        @include puntoRuptura("pantalla-estandar") {
+            width: 100px; // Tamaño máximo para pantallas grandes
+        }
+
+        @include puntoRuptura("tableta") {
+            width: 100px; // Tamaño del logo en tablets y pantallas más grandes
+        }
+    }
+//////////////////////////////////////////////
+/// //////////////////////////////////
+.menu_navegacion {
+    display: flex;
+    gap: 2rem; // Espaciado entre los elementos
+    list-style: none;
+    
+    a {
+        color: map-get(variables.$colores, color-neutro-bl);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: map-get(variables.$colores, color-boton);
+        }
+    }
+
+    @include puntoRuptura("movil") {
+        display: none; // Ocultar el menú en móviles si es necesario
+    }
+
+    @include puntoRuptura("tableta") {
+        display: flex; // Mostrar en tabletas y pantallas grandes
+    }
+}
+
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="estilos_sass/main.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <section class="menu_cabecera">
+            <picture class="logotipo">
+                <source srcset="img/logotipo_400x385.webp" type="image/webp" media=" (min-width: 1px )">
+                <img src="img/logotipo_400x385.jpg" alt="Logotipo">
+            </picture>
+            <nav>
+                <ul class="menu_navegacion">
+                    <li><a href="#">Ramos</a></li>
+                    <li><a href="#">Flores Sueltas</a></li>
+                    <li><a href="#">Coronas</a></li>
+                    <li><a href="#">Celebraciones</a></li>
+                    <li><a href="#">Condolencias</a></li>
+                    <li><a href="#">Cesta</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section class="seccion_heroe">
+            <article class="texto_heroe">
+                <h1>FLORISTERÍA ZACARÍAS</h1>
+                <h3>Tu Floristería en Granada</h3>
+            </article>
+        </section>
+
+        <section class="productos_destacados">
+            <h2>PRODUCTOS DESTACADOS</h2>
+            <section class="grid_productos">
+                <article class="tarjeta_producto">
+                    <a href="#">
+                        <picture>
+                            <!--Formato WEBP-->
+                            <source srcset="img/decoracion_mesa_2_2560x3840.webp" type="image/webp" media="(min-width: 2560px)">
+                            <source srcset="img/decoracion_mesa_2_1920x2880.webp" type="image/webp" media="(min-width: 1920px)">
+                            <source srcset="img/decoracion_mesa_2_1200x1800.webp" type="image/webp" media="(min-width: 1200px)">
+                            <source srcset="img/decoracion_mesa_2_768x1152.webp" type="image/webp" media="(min-width: 768px)">
+                            <source srcset="img/decoracion_mesa_2_480x720.webp" type="image/webp" media="(min-width: 480px)">
+                            <source srcset="img/decoracion_mesa_2_405x608.webp" type="image/webp" media="(max-width: 479px)">
+                            <!--Formato JPG-->
+                            <source srcset="img/decoracion_mesa_2_2560x3840.jpg" type="image/jpeg" media="(min-width: 2560px)">
+                            <source srcset="img/decoracion_mesa_2_1920x2880.jpg" type="image/jpeg" media="(min-width: 1920px)">
+                            <source srcset="img/decoracion_mesa_2_1200x1800.jpg" type="image/jpeg" media="(min-width: 1200px)">
+                            <source srcset="img/decoracion_mesa_2_768x1152.jpg" type="image/jpeg" media="(min-width: 768px)">
+                            <source srcset="img/decoracion_mesa_2_480x720.jpg" type="image/jpeg" media="(min-width: 480px)">
+                            <source srcset="img/decoracion_mesa_2_405x608.jpg" type="image/jpeg" media="(max-width: 479px)">
+                            <!-- <img src="img/decoracion_mesa_2_405x608.jpg" alt="Decoración de mesa"> -->
+                        </picture>
+                    </a>
+                </article>
+
+                    <article class="producto">
+                        <a href="#">
+                            <picture>
+                                <source srcset="" type="image/webp">
+                            </picture>
+                        </a>
+                    </article>
+
+                        <article class="producto">
+                            <a href="#">
+                                <picture>
+                                    <source srcset="" type="image/webp">
+                                </picture>
+                            </a>
+                        </article>
+            </section>
+        </section>
+        <section class="nuestra_seleccion">
+            <h2>NUESTRA SELECCIÓN</h2>
+            <article>
+            <p>Descubre nuestros exclusivos ramos de flores diseñados para cada ocasión especial. Desde arreglos
+                elegantes hasta combinaciones frescas y vibrantes, en nuestra floristería encontrarás el ramo perfecto
+                para expresar tus sentimientos. Explora nuestra colección de ramos únicos, creados con todo nuestro
+                cariño y dedicación.</p>
+            <button id="boton_catalogo"> PRUEBA NUESTRO CATÁLOGO </button>
+            </article>
+        </section>
+        <section class="novedades">
+            <h2>NOVEDADES</h2>
+            <section class="grid_productos">
+            <article class="producto">
+                <picture>
+                    <source srcset="" type="image/webp">
+                    <img>
+                </picture>
+                <button id="boton_comprar"> COMPRAR </button>
+                <span class="precio">20€</span>
+            </article>
+            <article class="producto">
+                <picture>
+                    <source srcset="" type="image/webp">
+                    <img>
+                </picture>
+                <button id="boton_comprar"> COMPRAR </button>
+                <span class="precio">30€</span>
+            </article>
+            <article class="producto">
+                <picture>
+                    <source srcset="" type="image/webp">
+                    <img>
+                </picture>
+                <button id="boton_comprar"> COMPRAR </button>
+                <span class="precio">40€</span>
+            </article>
+            </section>
+        </section>
+        
+    </main>
+    <footer class="pie_pagina">
+        <picture class="logotipo">
+            <source srcset="img/logotipo_400x385.jpg" type="image/webp">
+            <img src="img/logotipo_400x385.jpg" alt="Logotipo">
+        </picture>
+        <nav class="menu_pie">
+            <ul>
+                <li><a href="#">Políticas de Privacidad</a></li>
+                <li><a href="#">Licencias</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
+
