@@ -45,5 +45,24 @@
         font-family: map-get(variables.$tipografias, fuente-texto);
         font-size: 1.5rem;
 
+        @include puntoRuptura("movil") {
+            font-size: 1.2rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            font-size: 1.4rem;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 1.6rem;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 1.8rem;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 2rem;
+        }
     }
 }

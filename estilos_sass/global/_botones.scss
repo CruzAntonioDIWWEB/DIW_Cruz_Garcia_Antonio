@@ -1,0 +1,22 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+
+.boton {
+    &-catalogo {
+      background-color: map-get(variables.$colores, color-boton);
+      color: map-get(variables.$colores, color-neutro-bl);
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+  
+      &:hover {
+        background-color: darken(map-get(variables.$colores, color-boton), 10%); 
+      }
+    }
+  
+    &-comprar {
+      @extend .boton-catalogo;
+      width: 100%;
+    }
+  }

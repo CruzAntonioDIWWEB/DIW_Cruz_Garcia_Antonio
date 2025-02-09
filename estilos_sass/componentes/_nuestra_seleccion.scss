@@ -1,0 +1,69 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+
+.nuestra_seleccion {
+    background-color: map-get(variables.$colores, color-secundario);
+    padding: 4rem 0;
+    text-align: center;
+    border-radius: 50%;
+
+    h2 {
+        font-family: map-get(variables.$tipografias, fuente-titulos);
+        color: map-get(variables.$colores, color-primario);
+        margin-bottom: 2rem;
+
+        @include puntoRuptura("movil") {
+            font-size: 1.8rem;
+        }
+
+        @include puntoRuptura("tableta") {
+            font-size: 2rem;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 2.2rem;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 2.5rem;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 2.8rem;
+        }
+    }
+
+    p {
+        margin: 0 auto 2rem;
+        line-height: 1.8;
+        padding: 0 20px;
+
+        @include puntoRuptura("movil") {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+
+        @include puntoRuptura("tableta") {
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 1.3rem;
+            max-width: 1000px;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 1.4rem;
+            max-width: 1200px;
+        }
+    }
+
+}
+
+
