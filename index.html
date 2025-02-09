@@ -1,3 +1,5 @@
+<!--COMENTA EL CODIGO-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +14,7 @@
     <header class="cabecera">
         <section class="menu_cabecera">
             <picture class="logotipo">
-                <source srcset="img/logotipo_400x385.webp" type="image/webp" media=" (min-width: 1px )">
+                <source srcset="img/logotipo_397X380.webp" type="image/webp" media=" (min-width: 1px )">
                 <img src="img/logotipo_400x385.jpg" alt="Logotipo">
             </picture>
             <nav>
@@ -38,7 +40,7 @@
 
         <section class="productos_destacados">
             <h2>PRODUCTOS DESTACADOS</h2>
-            <section class="grid_productos">
+            <section class="productos_grid">
                 <article class="tarjeta_producto">
                     <a href="#">
                         <picture>
@@ -56,7 +58,8 @@
                             <source srcset="img/decoracion_mesa_2_768x1152.jpg" type="image/jpeg" media="(min-width: 768px)">
                             <source srcset="img/decoracion_mesa_2_480x720.jpg" type="image/jpeg" media="(min-width: 480px)">
                             <source srcset="img/decoracion_mesa_2_405x608.jpg" type="image/jpeg" media="(max-width: 479px)">
-                            <!-- <img src="img/decoracion_mesa_2_405x608.jpg" alt="Decoración de mesa"> -->
+                                <!--Imagen de fallback-->
+                                <img src="img/decoracion_mesa_2_405x608.jpg" alt="Decoración de mesa">
                         </picture>
                     </a>
                 </article>
@@ -121,7 +124,7 @@
     </main>
     <footer class="pie_pagina">
         <picture class="logotipo">
-            <source srcset="img/logotipo_400x385.jpg" type="image/webp">
+            <source srcset="img/logotipo_397X380.webp" type="image/webp">
             <img src="img/logotipo_400x385.jpg" alt="Logotipo">
         </picture>
         <nav class="menu_pie">
@@ -133,7 +136,6 @@
             </ul>
         </nav>
     </footer>
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
