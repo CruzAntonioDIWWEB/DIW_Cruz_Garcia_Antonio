@@ -1,17 +1,20 @@
+//Estilos para la sección intermedia "nuestra selección"
 @use '../global/variables';
 @use '../global/mixins' as *;
 
 .nuestra_seleccion {
     background-color: map-get(variables.$colores, color-secundario);
     padding: 4rem 0;
-    text-align: center;
-    border-radius: 50%;
+    border-radius: 50%; //Hago que la sección tenga forma ovalada
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
         font-family: map-get(variables.$tipografias, fuente-titulos);
         color: map-get(variables.$colores, color-primario);
-        margin-bottom: 2rem;
 
+        //Incremento gradualmente el tamaño del texto según el tamaño de la pantalla
         @include puntoRuptura("movil") {
             font-size: 1.8rem;
         }
@@ -33,11 +36,22 @@
         }
     }
 
+    //Utilizo flexbox para centrar los elementos
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem; //Ajusto el espacio entre elmentos
+        min-height: 250px; //Altura mínima
+        width: 100%;
+        padding: 2rem 0;
+    }
+
     p {
-        margin: 0 auto 2rem;
-        line-height: 1.8;
         padding: 0 20px;
         font-family: map-get(variables.$tipografias, fuente-texto);
+        text-align: center;
 
         @include puntoRuptura("movil") {
             font-size: 1rem;
@@ -64,7 +78,4 @@
             max-width: 1200px;
         }
     }
-
 }
-
-

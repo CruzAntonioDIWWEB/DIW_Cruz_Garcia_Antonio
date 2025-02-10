@@ -1,25 +1,26 @@
-// pie de pagina
+//Esitlos del pie de página incluye el logotipo y enlaces importantes
 @use '../global/variables';
 @use '../global/mixins' as *;
 
 .pie_pagina {
     background-color: map-get(variables.$colores, color-primario);
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; //Espacio de los elementos internos
 
+    //Estilo para el contenedor del pie de página utilizando flex
     .menu_pie {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
-        
+
         @include puntoRuptura("movil") {
-            flex-direction: column;
+            flex-direction: column; //En resoluaciones de movil, el pie de página cambia a modo columna
             gap: 1rem;
         }
 
         @include puntoRuptura("tableta") {
-            flex-direction: row;
+            flex-direction: row; //En resoluciones de tableta en adelante, el pie de página cambia a modo fila
             padding: 0 2rem;
         }
 
@@ -40,7 +41,7 @@
 .logotipo {
     width: 50px;
     height: auto;
-    
+
     img {
         width: 100%;
         height: auto;
@@ -49,7 +50,7 @@
     @include puntoRuptura("movil") {
         width: 40px;
     }
-    
+
     @include puntoRuptura("tableta") {
         width: 45px;
     }
@@ -67,17 +68,18 @@
     }
 }
 
+//Estilos para los enlaces del pie de página
 .menu_navegacion {
     display: flex;
     gap: 2rem;
     list-style: none;
-    
+
     li a {
         color: map-get(variables.$colores, color-neutro-bl);
         text-decoration: none;
 
         &:hover {
-            color: map-get(variables.$colores, color-boton);
+            color: map-get(variables.$colores, color-boton); //cambio el color al pasar el ratón por encima
         }
 
         @include puntoRuptura("pantalla-peque") {
@@ -93,6 +95,7 @@
         }
     }
 
+    //Ajustes para que el pie de página en resoluciones de movil no colapse
     @include puntoRuptura("movil") {
         flex-wrap: wrap;
         justify-content: center;

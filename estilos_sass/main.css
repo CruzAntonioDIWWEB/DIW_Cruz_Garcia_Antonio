@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -16,7 +17,7 @@ img {
   height: auto;
 }
 
-/*Diferentes puntos de ruptura*/
+/* Definición de los mixins para puntos de ruptura y el estilo de las imagenes */
 .cabecera {
   background-color: #A3B18A;
   padding: 1rem 2rem;
@@ -222,34 +223,40 @@ img {
   }
 }
 
-.productos_destacados, .novedades {
+.productos_destacados,
+.novedades {
   padding: 2rem 1rem;
   margin: 0 auto;
   max-width: 90%;
 }
 @media (min-width: 768px) {
-  .productos_destacados, .novedades {
+  .productos_destacados,
+  .novedades {
     padding: 3rem 2rem;
     max-width: 720px;
   }
 }
 @media (min-width: 1200px) {
-  .productos_destacados, .novedades {
+  .productos_destacados,
+  .novedades {
     padding: 4rem 3rem;
     max-width: 1140px;
   }
 }
 @media (min-width: 1920px) {
-  .productos_destacados, .novedades {
+  .productos_destacados,
+  .novedades {
     max-width: 1800px;
   }
 }
 @media (min-width: 2560px) {
-  .productos_destacados, .novedades {
+  .productos_destacados,
+  .novedades {
     max-width: 2200px;
   }
 }
-.productos_destacados h2, .novedades h2 {
+.productos_destacados h2,
+.novedades h2 {
   font-family: "Playfair Display, serif";
   text-align: center;
   color: #A3B18A;
@@ -257,17 +264,20 @@ img {
   font-size: 1.6rem;
 }
 @media (min-width: 768px) {
-  .productos_destacados h2, .novedades h2 {
+  .productos_destacados h2,
+  .novedades h2 {
     font-size: 1.8rem;
   }
 }
 @media (min-width: 1200px) {
-  .productos_destacados h2, .novedades h2 {
+  .productos_destacados h2,
+  .novedades h2 {
     font-size: 2rem;
   }
 }
 @media (min-width: 1920px) {
-  .productos_destacados h2, .novedades h2 {
+  .productos_destacados h2,
+  .novedades h2 {
     font-size: 2.2rem;
   }
 }
@@ -310,7 +320,6 @@ img {
   border-radius: 10px;
   overflow: hidden;
   background-color: #FFFFFF;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .producto_novedad picture {
   display: block;
@@ -351,20 +360,21 @@ img {
   border-radius: 5px;
   font-family: "Poppins, sans-serif";
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 
 .nuestra_seleccion {
   background-color: #D9CAB3;
   padding: 4rem 0;
-  text-align: center;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .nuestra_seleccion h2 {
   font-family: "Playfair Display, serif";
   color: #A3B18A;
-  margin-bottom: 2rem;
 }
 @media (min-width: 480px) {
   .nuestra_seleccion h2 {
@@ -391,11 +401,20 @@ img {
     font-size: 2.8rem;
   }
 }
+.nuestra_seleccion article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  min-height: 250px;
+  width: 100%;
+  padding: 2rem 0;
+}
 .nuestra_seleccion p {
-  margin: 0 auto 2rem;
-  line-height: 1.8;
   padding: 0 20px;
   font-family: "Roboto, sans-serif";
+  text-align: center;
 }
 @media (min-width: 480px) {
   .nuestra_seleccion p {

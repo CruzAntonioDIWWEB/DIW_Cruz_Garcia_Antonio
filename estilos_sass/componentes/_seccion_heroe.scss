@@ -1,47 +1,54 @@
+//Estilos para la imagen héroe y el texto de bienvenida
 @use '../global/variables';
 @use '../global/mixins' as *;
-//Los puntos de ruputra debo implementarlos
 
-.seccion_heroe{
+//Contenedor de la sección héroe, utilizo una imagen de fondo
+.seccion_heroe {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    background-image: url('../img/hero_image_1_943x455.webp');
+    height: 40vh; //Utilizo vh para que la seccion opcupe el 40% de la altura de la pantalla
+    background-image: url('../img/hero_image_1_943x455.webp'); //Imagen de fondo
     width: 100%;
     background-position: center;
     position: relative;
-    background-size: cover;
+    background-size: cover; //La imagen se ajusta al tamaño del contenedor
 }
 
+//Estilo para el texto de bienvenida
 .texto_heroe {
     position: relative;
     text-align: center;
     color: map-get(variables.$colores, color-neutro-bl);
-    z-index: 1;
+    z-index: 1; //texto sobre la imagen
 
-    h1{
+    h1 {
         font-family: map-get(variables.$tipografias, fuente-titulos);
         font-size: 2rem;
 
+        //Diferentes tamaños de fuente según el tamaño de la pantalla
         @include puntoRuptura("movil") {
             font-size: 1.5rem;
         }
+
         @include puntoRuptura("tableta") {
             font-size: 2.5rem;
         }
+
         @include puntoRuptura("pantalla-peque") {
             font-size: 3rem;
         }
+
         @include puntoRuptura("pantalla-estandar") {
             font-size: 3.5rem;
         }
+
         @include puntoRuptura("pantalla-grande") {
             font-size: 4rem;
         }
     }
 
-    h3{
+    h3 {
         font-family: map-get(variables.$tipografias, fuente-texto);
         font-size: 1.5rem;
 

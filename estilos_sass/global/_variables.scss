@@ -1,3 +1,6 @@
+//Definición de las variables utilizadas en el proyecto
+
+//Definición de los puntos de ruptura
 $breakpoints: (
     movil: 480px,
     tableta: 768px,
@@ -6,7 +9,7 @@ $breakpoints: (
     pantalla-grande: 2560px
 );
 
-
+//Definición de los colores de la página
 $colores: (
     color-menu: #afbb9b,
     color-primario: #A3B18A,
@@ -16,8 +19,9 @@ $colores: (
     color-neutro-gr: #E5E5E5
 );
 
+//Definición de las diferentes tipografías
 $tipografias: (
     fuente-titulos: 'Playfair Display, serif',
     fuente-texto: 'Roboto, sans-serif',
     fuente-cta: 'Poppins, sans-serif'
-)
+    )

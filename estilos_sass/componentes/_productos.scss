@@ -1,18 +1,21 @@
-//Este archivo alberga los estilos de los apartados de productos destacados y novedades dentro de la pagina principal
+//Estilos para la sección de productos destacados y novedades
 @use '../global/variables';
 @use '../global/mixins' as *;
 
-.productos_destacados, .novedades {
+//Estilos generales para los productos destacados y novedades
+.productos_destacados,
+.novedades {
     padding: 2rem 1rem; //base para móvil
     margin: 0 auto;
-    max-width: 90%;
-    
+    max-width: 90%; //ancho máximo para móvil
 
+    //Estilos para tabletas
     @include puntoRuptura("tableta") {
         padding: 3rem 2rem;
         max-width: 720px;
     }
 
+    //Estilos para pantallas más grandes
     @include puntoRuptura("pantalla-peque") {
         padding: 4rem 3rem;
         max-width: 1140px;
@@ -26,6 +29,7 @@
         max-width: 2200px;
     }
 
+    //Estilos para los encabezados de productos destacados y novedades
     h2 {
         font-family: map-get(variables.$tipografias, fuente-titulos);
         text-align: center;
@@ -33,6 +37,7 @@
         margin-bottom: 2rem;
         font-size: 1.6rem; //base para movil
 
+        //Diferentes tamaños de fuente para distintos tamaños de pantalla
         @include puntoRuptura("tableta") {
             font-size: 1.8rem;
         }
@@ -47,62 +52,64 @@
     }
 }
 
+//Utilizo grid para posicionar los productos, se ajustan según el tamaño de la pantalla
 .productos_grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 1fr; //una sola columna para moviles
-    
+    grid-template-columns: 1fr; //Una sola columna para moviles
+
 
     @include puntoRuptura("tableta") {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); //Dos columnas en tabletas
         gap: 2rem;
     }
 
     @include puntoRuptura("pantalla-peque") {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); //Tres columnas en pantallas pequeñas
         gap: 2.5rem;
     }
 
 }
 
+//Estilos para las tarjetas de productos, incluyo efectos cuando se pasa el ratón por encima
 .tarjeta_producto {
-    picture{
+    picture {
         display: block;
-        height: 90%; // Reduce la altura de la imagen
+        height: 90%; //reduce la altura de la imagen un poco
         overflow: hidden;
         border-radius: 10px;
-        
-        @include estiloImagen;
+
+        @include estiloImagen; //utilizo un mixin para los estilos de las imágenes
     }
-    
+
 }
 
+//Estilos para los botones de compra y precios en las tarjetas de productos de la sección novedades
 .producto_novedad {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     background-color: map-get(variables.$colores, color-neutro-bl);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+
     picture {
         display: block;
-        height: 90%; // Reduce la altura de la imagen
-        
-        @include estiloImagen;
+        height: 90%;
+
+        @include estiloImagen; //utilizo un mixin para los estilos de las imágenes
     }
 
     .boton-comprar {
         position: absolute;
         bottom: 1rem;
         left: 1rem;
-        width: calc(100% - 7rem); //ancho ajustado para dejar espacio al precio
+        width: calc(100% - 7rem); //ancho del botón ajustado para dejar espacio al precio
         padding: 0.75rem 1rem;
         background-color: map-get(variables.$colores, color-boton);
         color: map-get(variables.$colores, color-neutro-bl);
         border: none;
         border-radius: 5px;
         font-weight: bold;
-        z-index: 2; //asegura que el botón esté sobre la imagen
+        z-index: 2; //posiciono el botón sobre la imagen
         transition: transform 0.3s ease;
 
         &:hover {
@@ -120,7 +127,7 @@
         border-radius: 5px;
         font-family: map-get(variables.$tipografias, fuente-cta);
         font-weight: bold;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 2; // Asegura que el precio esté sobre la imagen
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 2; //posiciono el precio sobre la imagen
     }
 }

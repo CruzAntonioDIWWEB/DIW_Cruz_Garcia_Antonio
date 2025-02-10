@@ -1,24 +1,27 @@
-// cabecera.scss
+//Estilos para la cabecera de la página, incluye el logotipo y el menú de navegación
 @use '../global/variables';
 @use '../global/mixins' as *;
 
 .cabecera {
     background-color: map-get(variables.$colores, color-primario);
-    padding: 1rem 2rem; //espacio a los elementos internos
+    padding: 1rem 2rem; //espacio de los elementos internos
 
+    //Estilo para el contenedor del menú utilizando flex
     .menu_cabecera {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
-        
-        @include puntoRuptura("movil") { //en movil se cambia a modo columna
+
+        @include puntoRuptura("movil") {
+            //para resoluciones de movil, el menú cambia a modo columna
             flex-direction: column;
             gap: 1rem;
         }
 
-        @include puntoRuptura("tableta") { //en tableta se cambia a modo fila
+        @include puntoRuptura("tableta") {
+            //para resoluciones de tableta en adelante, el menú cambia a modo fila
             flex-direction: row;
             padding: 0 2rem;
         }
@@ -37,19 +40,22 @@
     }
 }
 
+//Estilos para el logotipo de la empresa
 .logotipo {
-    width: 50px; //ancho por defecto
+    width: 50px; //le doy un ancho por defecto
     height: auto;
-    
+
+    //Estilo para que la imagen del logotipo ocupe todo el espacio disponible
     img {
         width: 100%;
         height: auto;
     }
 
+    //Tamaño del logotipo para diferentes resoluciones
     @include puntoRuptura("movil") {
         width: 40px;
     }
-    
+
     @include puntoRuptura("tableta") {
         width: 45px;
     }
@@ -67,19 +73,22 @@
     }
 }
 
+//Estilos para el menú de navegación utilizando flex
 .menu_navegacion {
     display: flex;
     gap: 2rem;
-    list-style: none;
-    
+    list-style: none; //quito los puntos de la lista
+
+    //Estilo para los elementos de la lista
     li a {
         color: map-get(variables.$colores, color-neutro-bl);
         text-decoration: none;
 
         &:hover {
-            color: map-get(variables.$colores, color-boton);
+            color: map-get(variables.$colores, color-boton); //cambio el color al pasar el ratón por encima
         }
 
+        //Tamaño de la fuente para diferentes resoluciones
         @include puntoRuptura("pantalla-peque") {
             font-size: 1rem;
         }
@@ -93,12 +102,14 @@
         }
     }
 
+    //Ajustes para que el menú en resoluciones de movil no colapse
     @include puntoRuptura("movil") {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
     }
 
+    //Diferentes espacios entre elementos para el resto de resoluciones
     @include puntoRuptura("tableta") {
         gap: 2.5rem;
     }
@@ -115,6 +126,3 @@
         gap: 4rem;
     }
 }
-
-
-
