@@ -11,18 +11,19 @@
         justify-content: space-between;
         align-items: center;
         max-width: 1200px;
+        margin: 0 auto;
         
-        @include puntoRuptura("movil") {
+        @include puntoRuptura("movil") { //en movil se cambia a modo columna
             flex-direction: column;
             gap: 1rem;
         }
 
-        @include puntoRuptura("tableta") {
+        @include puntoRuptura("tableta") { //en tableta se cambia a modo fila
+            flex-direction: row;
             padding: 0 2rem;
         }
 
         @include puntoRuptura("pantalla-peque") {
-            padding: 0 3rem;
             max-width: 1400px;
         }
 

@@ -1,26 +1,26 @@
 /*Diferentes puntos de ruptura*/
 @mixin puntoRuptura($breakpoint) {
     @if $breakpoint == "movil" {
-        @media (max-width: 767px) {
+        @media (min-width: 480px) {
             @content;
         }
-    } @else if ($breakpoint == "tableta"){
-        @media (min-width: 768px) and (max-width: 1199px) {
+    } @else if ($breakpoint == "tableta") {
+        @media (min-width: 768px) {
             @content;
         }
-    } @else if ($breakpoint == "pantalla-peque"){
-        @media (min-width: 1200px) and (max-width: 1919px) {
+    } @else if ($breakpoint == "pantalla-peque") {
+        @media (min-width: 1200px) {
             @content;
         }
-    } @else if ($breakpoint == "pantalla-estandar"){
-        @media (min-width: 1920px) and (max-width: 2559px) {
+    } @else if ($breakpoint == "pantalla-estandar") {
+        @media (min-width: 1920px) {
             @content;
         }
-    } @else if ($breakpoint == "pantalla-grande"){
+    } @else if ($breakpoint == "pantalla-grande") {
         @media (min-width: 2560px) {
             @content;
         }
     }
 }
 
-/**/
+

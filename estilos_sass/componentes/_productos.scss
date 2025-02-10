@@ -3,22 +3,18 @@
 @use '../global/mixins' as *;
 
 .productos_destacados, .novedades {
-    padding: 4rem 0;
+    padding: 2rem 1rem; //base para móvil
     margin: 0 auto;
-
-    @include puntoRuptura("movil") {
-        padding: 2rem 1rem;
-        max-width: 100%;
-    }
+    max-width: 90%;
 
     @include puntoRuptura("tableta") {
         padding: 3rem 2rem;
-        max-width: 768px;
+        max-width: 720px;
     }
 
     @include puntoRuptura("pantalla-peque") {
         padding: 4rem 3rem;
-        max-width: 1200px;
+        max-width: 1140px;
     }
 
     @include puntoRuptura("pantalla-estandar") {
@@ -34,10 +30,7 @@
         text-align: center;
         color: map-get(variables.$colores, color-primario);
         margin-bottom: 2rem;
-
-        @include puntoRuptura("movil") {
-            font-size: 1.8rem;
-        }
+        font-size: 1.8rem; //base para movil
 
         @include puntoRuptura("tableta") {
             font-size: 2rem;
@@ -50,21 +43,13 @@
         @include puntoRuptura("pantalla-estandar") {
             font-size: 2.5rem;
         }
-
-        @include puntoRuptura("pantalla-grande") {
-            font-size: 2.8rem;
-        }
     }
 }
 
 .productos_grid {
     display: grid;
-    gap: 2rem;
-
-    @include puntoRuptura("movil") {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
+    gap: 1.5rem;
+    grid-template-columns: 1fr; //una sola columna para moviles
 
     @include puntoRuptura("tableta") {
         grid-template-columns: repeat(2, 1fr);
@@ -76,41 +61,30 @@
         gap: 2.5rem;
     }
 
-    @include puntoRuptura("pantalla-estandar") {
-        gap: 3rem;
-    }
-
-    @include puntoRuptura("pantalla-grande") {
-        gap: 3.5rem;
-    }
 }
 
 .tarjeta_producto {
     position: relative;
+    aspect-ratio: 2/3; // Mantiene la proporción de la imagen
+    border-radius: 10px;
+    overflow: hidden;
+
+    a {
+        display: block;
+        height: 100%;
+    }
+
+    picture {
+        display: block;
+        height: 100%;
+    }
 
     img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 10px;
+        transition: transform 0.3s ease;
 
-        @include puntoRuptura("movil") {
-            height: 300px;
-        }
-
-        @include puntoRuptura("tableta") {
-            height: 350px;
-        }
-
-        @include puntoRuptura("pantalla-peque") {
-            height: 400px;
-        }
-
-        @include puntoRuptura("pantalla-estandar") {
-            height: 450px;
-        }
-
-        @include puntoRuptura("pantalla-grande") {
-            height: 500px;
-        }
     }
 }

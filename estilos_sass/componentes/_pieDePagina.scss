@@ -1,91 +1,117 @@
+// pie de pagina
 @use '../global/variables';
 @use '../global/mixins' as *;
 
 .pie_pagina {
     background-color: map-get(variables.$colores, color-primario);
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1rem 2rem;
 
-    @include puntoRuptura("movil") {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1.5rem;
-    }
-
-    @include puntoRuptura("tableta") {
-        padding: 2rem;
-    }
-
-    @include puntoRuptura("pantalla-peque") {
-        padding: 2.5rem;
-    }
-
-    @include puntoRuptura("pantalla-estandar") {
-        padding: 3rem;
-    }
-
-    @include puntoRuptura("pantalla-grande") {
-        padding: 3.5rem;
-    }
-
-    .menu_pie ul {
+    .menu_pie {
         display: flex;
-        gap: 2rem;
-        list-style: none;
-
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        
         @include puntoRuptura("movil") {
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
             gap: 1rem;
         }
 
         @include puntoRuptura("tableta") {
-            gap: 2rem;
+            flex-direction: row;
+            padding: 0 2rem;
         }
 
         @include puntoRuptura("pantalla-peque") {
-            gap: 2.5rem;
+            max-width: 1400px;
         }
 
         @include puntoRuptura("pantalla-estandar") {
-            gap: 3rem;
+            max-width: 1800px;
         }
 
         @include puntoRuptura("pantalla-grande") {
-            gap: 3.5rem;
+            max-width: 2200px;
+        }
+    }
+}
+
+.logotipo {
+    width: 50px;
+    height: auto;
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    @include puntoRuptura("movil") {
+        width: 40px;
+    }
+    
+    @include puntoRuptura("tableta") {
+        width: 45px;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        width: 55px;
+    }
+
+    @include puntoRuptura("pantalla-estandar") {
+        width: 60px;
+    }
+
+    @include puntoRuptura("pantalla-grande") {
+        width: 70px;
+    }
+}
+
+.menu_navegacion {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    
+    li a {
+        color: map-get(variables.$colores, color-neutro-bl);
+        text-decoration: none;
+
+        &:hover {
+            color: map-get(variables.$colores, color-boton);
         }
 
-        a {
-            color: map-get(variables.$colores, color-neutro-bl);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-
-            @include puntoRuptura("movil") {
-                font-size: 0.9rem;
-            }
-
-            @include puntoRuptura("tableta") {
-                font-size: 1rem;
-            }
-
-            @include puntoRuptura("pantalla-peque") {
-                font-size: 1.1rem;
-            }
-
-            @include puntoRuptura("pantalla-estandar") {
-                font-size: 1.2rem;
-            }
-
-            @include puntoRuptura("pantalla-grande") {
-                font-size: 1.3rem;
-            }
-
-            &:hover {
-                opacity: 1;
-            }
+        @include puntoRuptura("pantalla-peque") {
+            font-size: 1rem;
         }
+
+        @include puntoRuptura("pantalla-estandar") {
+            font-size: 1.1rem;
+        }
+
+        @include puntoRuptura("pantalla-grande") {
+            font-size: 1.2rem;
+        }
+    }
+
+    @include puntoRuptura("movil") {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    @include puntoRuptura("tableta") {
+        gap: 2.5rem;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        gap: 3rem;
+    }
+
+    @include puntoRuptura("pantalla-estandar") {
+        gap: 3.5rem;
+    }
+
+    @include puntoRuptura("pantalla-grande") {
+        gap: 4rem;
     }
 }
