@@ -319,8 +319,6 @@ img {
 .producto_novedad picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   transition: transform 0.3s ease;
 }
 .producto_novedad picture img:hover {
@@ -348,6 +346,7 @@ img {
   bottom: 1rem;
   right: 1rem;
   background-color: #FFFFFF;
+  color: #A3B18A;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   font-family: "Poppins, sans-serif";
