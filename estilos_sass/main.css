@@ -165,31 +165,31 @@ img {
 }
 .texto_heroe h1 {
   font-family: "Playfair Display, serif";
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 @media (min-width: 480px) {
   .texto_heroe h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 768px) {
   .texto_heroe h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 1200px) {
   .texto_heroe h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1920px) {
   .texto_heroe h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 2560px) {
   .texto_heroe h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 .texto_heroe h3 {
@@ -198,27 +198,27 @@ img {
 }
 @media (min-width: 480px) {
   .texto_heroe h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
   .texto_heroe h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1200px) {
   .texto_heroe h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 1920px) {
   .texto_heroe h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 2560px) {
   .texto_heroe h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -254,21 +254,21 @@ img {
   text-align: center;
   color: #A3B18A;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 @media (min-width: 768px) {
   .productos_destacados h2, .novedades h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1200px) {
   .productos_destacados h2, .novedades h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1920px) {
   .productos_destacados h2, .novedades h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -290,27 +290,70 @@ img {
   }
 }
 
-.tarjeta_producto {
-  position: relative;
-  aspect-ratio: 2/3;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.tarjeta_producto a {
-  display: block;
-  height: 100%;
-}
 .tarjeta_producto picture {
   display: block;
-  height: 100%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 10px;
 }
-.tarjeta_producto img {
+.tarjeta_producto picture img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.tarjeta_producto picture img:hover {
+  transform: scale(1.02);
+}
+
+.producto_novedad {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.producto_novedad picture {
+  display: block;
+  height: 90%;
+}
+.producto_novedad picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
   transition: transform 0.3s ease;
+}
+.producto_novedad picture img:hover {
+  transform: scale(1.02);
+}
+.producto_novedad .boton-comprar {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  width: calc(100% - 7rem);
+  padding: 0.75rem 1rem;
+  background-color: #D95D39;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.producto_novedad .boton-comprar:hover {
+  background-color: #bb4624;
+}
+.producto_novedad .precio {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #FFFFFF;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  font-family: "Poppins, sans-serif";
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .nuestra_seleccion {
@@ -353,6 +396,7 @@ img {
   margin: 0 auto 2rem;
   line-height: 1.8;
   padding: 0 20px;
+  font-family: "Roboto, sans-serif";
 }
 @media (min-width: 480px) {
   .nuestra_seleccion p {

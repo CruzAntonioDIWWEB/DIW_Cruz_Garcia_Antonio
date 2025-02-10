@@ -22,22 +22,22 @@
 
     h1{
         font-family: map-get(variables.$tipografias, fuente-titulos);
-        font-size: 2.5rem;
+        font-size: 2rem;
 
         @include puntoRuptura("movil") {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         @include puntoRuptura("tableta") {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         @include puntoRuptura("pantalla-peque") {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
         @include puntoRuptura("pantalla-estandar") {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
         @include puntoRuptura("pantalla-grande") {
-            font-size: 4.5rem;
+            font-size: 4rem;
         }
     }
 
@@ -46,23 +46,23 @@
         font-size: 1.5rem;
 
         @include puntoRuptura("movil") {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         @include puntoRuptura("tableta") {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         @include puntoRuptura("pantalla-peque") {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
         }
 
         @include puntoRuptura("pantalla-estandar") {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
 
         @include puntoRuptura("pantalla-grande") {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 }

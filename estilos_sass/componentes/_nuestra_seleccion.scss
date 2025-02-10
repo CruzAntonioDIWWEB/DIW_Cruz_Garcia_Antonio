@@ -37,6 +37,7 @@
         margin: 0 auto 2rem;
         line-height: 1.8;
         padding: 0 20px;
+        font-family: map-get(variables.$tipografias, fuente-texto);
 
         @include puntoRuptura("movil") {
             font-size: 1rem;

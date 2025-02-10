@@ -11,7 +11,7 @@
       font-weight: bold;
   
       &:hover {
-        background-color: darken(map-get(variables.$colores, color-boton), 10%); 
+        background-color: darken(map-get(variables.$colores, color-boton), 10%);
       }
     }
   
