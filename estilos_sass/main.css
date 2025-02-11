@@ -58,6 +58,7 @@ img {
 }
 
 .logotipo {
+  display: inline-block;
   width: 50px;
   height: auto;
 }
@@ -588,4 +589,121 @@ img {
 }
 .boton-comprar {
   width: 100%;
+}
+
+.introduccion_flores_sueltas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .introduccion_flores_sueltas {
+    padding: 3rem 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .introduccion_flores_sueltas {
+    padding: 4rem 3rem;
+  }
+}
+.introduccion_flores_sueltas h1 {
+  font-family: "Playfair Display, serif";
+  text-align: center;
+  color: #A3B18A;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.texto_introduccion {
+  background-color: #D9CAB3;
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+.texto_introduccion p {
+  font-family: "Roboto, sans-serif";
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.filtrado {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.filtrado .boton-filtrar {
+  background-color: #D95D39;
+  color: #FFFFFF;
+  padding: 0.75rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  font-family: "Poppins, sans-serif";
+  font-weight: bold;
+}
+
+.flores_sueltas_grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1rem;
+  background-color: #A3B18A;
+  border-radius: 15px;
+}
+@media (min-width: 768px) {
+  .flores_sueltas_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .flores_sueltas_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tarjeta_flor {
+  display: flex;
+  flex-direction: column;
+  background-color: #D9CAB3;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+.tarjeta_flor picture {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.tarjeta_flor picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tarjeta_flor .detalles_flor {
+  padding: 1.5rem;
+}
+.tarjeta_flor .detalles_flor h2 {
+  font-family: "Playfair Display, serif";
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.tarjeta_flor .detalles_flor p {
+  font-family: "Roboto, sans-serif";
+  margin-bottom: 1rem;
+}
+.tarjeta_flor .detalles_flor .precio {
+  display: block;
+  text-align: right;
+  font-family: "Poppins, sans-serif";
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #D95D39;
 }/*# sourceMappingURL=main.css.map */
