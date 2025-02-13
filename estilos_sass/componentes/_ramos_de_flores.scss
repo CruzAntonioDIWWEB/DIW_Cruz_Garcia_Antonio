@@ -1,0 +1,136 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+
+.introduccion_flores_sueltas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: map-get(variables.$colores, color-fondo);
+
+    @include puntoRuptura("tableta") {
+        padding: 3rem 2rem;
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        padding: 4rem 3rem;
+    }
+
+    h1 {
+        font-family: map-get(variables.$tipografias, fuente-titulos);
+        text-align: center;
+        color: map-get(variables.$colores, color-primario);
+        font-size: 2.5rem;
+        position: relative;
+    }
+}
+
+.texto_introduccion {
+    background-color: map-get(variables.$colores, color-secundario);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+
+    p {
+        font-family: map-get(variables.$tipografias, fuente-texto);
+        text-align: center;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+.filtrado {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .boton-filtrar {
+        background-color: map-get(variables.$colores, color-boton);
+        color: map-get(variables.$colores, color-neutro-bl);
+        padding: 0.75rem 2.5rem;
+        border: none;
+        border-radius: 5px;
+        font-family: map-get(variables.$tipografias, fuente-cta);
+        font-weight: bold;
+
+        &:hover {
+            background-color: darken(map-get(variables.$colores, color-boton), 10%);
+        }
+    }
+}
+
+.flores_sueltas_grid {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 1rem;
+    background-color: map-get(variables.$colores, color-primario);
+    border-radius: 15px;
+
+    @include puntoRuptura("tableta") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include puntoRuptura("pantalla-peque") {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tarjeta_flor {
+    display: flex;
+    flex-direction: column;
+    background-color: map-get(variables.$colores, color-secundario);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+
+    picture {
+        width: 100%;
+        height: 400px;
+        @include estiloImagen;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .detalles_flor {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; /* Asegura que los elementos se distribuyan de manera uniforme en el contenedor */
+    
+        h2 {
+            font-family: map-get(variables.$tipografias, fuente-titulos);
+            font-size: 1.2rem;
+            color: map-get(variables.$colores, color-texto);
+            margin-bottom: 0.5rem;
+        }
+    
+        p {
+            font-family: map-get(variables.$tipografias, fuente-texto);
+            color: map-get(variables.$colores, color-texto-secundario);
+            margin-bottom: 1rem;
+        }
+    
+        .precio {
+            background-color: map-get(variables.$colores, color-neutro-gr);
+            color: map-get(variables.$colores, color-boton);
+            padding: 0.5rem 0.75rem;
+            border-radius: 10px;
+            font-family: map-get(variables.$tipografias, fuente-cta);
+            font-size: 1.3rem;
+            font-weight: bold;
+            align-self: center;
+        }
+    }
+}
