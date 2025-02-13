@@ -283,19 +283,19 @@ img {
   }
 }
 
-.productos_grid {
+.productos_principales {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr;
 }
 @media (min-width: 768px) {
-  .productos_grid {
+  .productos_principales {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .productos_grid {
+  .productos_principales {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
@@ -590,7 +590,7 @@ img {
   width: 100%;
 }
 
-.introduccion_flores_sueltas {
+.introduccion_a_seccion {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -600,16 +600,16 @@ img {
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .introduccion_flores_sueltas {
+  .introduccion_a_seccion {
     padding: 3rem 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .introduccion_flores_sueltas {
+  .introduccion_a_seccion {
     padding: 4rem 3rem;
   }
 }
-.introduccion_flores_sueltas h1 {
+.introduccion_a_seccion h1 {
   font-family: "Playfair Display, serif";
   text-align: center;
   color: #A3B18A;
@@ -649,7 +649,7 @@ img {
   background-color: #bb4624;
 }
 
-.flores_sueltas_grid {
+.productos_grid {
   display: grid;
   gap: 2rem;
   width: 100%;
@@ -659,17 +659,17 @@ img {
   border-radius: 15px;
 }
 @media (min-width: 768px) {
-  .flores_sueltas_grid {
+  .productos_grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1200px) {
-  .flores_sueltas_grid {
+  .productos_grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.tarjeta_flor {
+.contenedor_producto {
   display: flex;
   flex-direction: column;
   background-color: #D9CAB3;
@@ -678,41 +678,41 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
-.tarjeta_flor picture {
+.contenedor_producto picture {
   width: 100%;
   height: 400px;
 }
-.tarjeta_flor picture img {
+.contenedor_producto picture img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease;
 }
-.tarjeta_flor picture img:hover {
+.contenedor_producto picture img:hover {
   transform: scale(1.02);
 }
-.tarjeta_flor picture img {
+.contenedor_producto picture img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.tarjeta_flor .detalles_flor {
+.contenedor_producto .detalles_producto {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%; /* Asegura que los elementos se distribuyan de manera uniforme en el contenedor */
 }
-.tarjeta_flor .detalles_flor h2 {
+.contenedor_producto .detalles_producto h2 {
   font-family: "Playfair Display, serif";
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-.tarjeta_flor .detalles_flor p {
+.contenedor_producto .detalles_producto p {
   font-family: "Roboto, sans-serif";
   margin-bottom: 1rem;
 }
-.tarjeta_flor .detalles_flor .precio {
+.contenedor_producto .detalles_producto .precio {
   background-color: #E5E5E5;
   color: #D95D39;
   padding: 0.5rem 0.75rem;

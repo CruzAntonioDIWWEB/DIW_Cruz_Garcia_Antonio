@@ -4,8 +4,8 @@
 @use 'global/mixins'; //Mixins reutilizables
 @use 'global/variables'; //Variables globales
 @use 'componentes/seccion_heroe'; //Estilos para la sección héroe
-@use 'componentes/productos'; //Estilos para los productos
+@use 'componentes/productos_index'; //Estilos para los productos
 @use 'componentes/nuestra_seleccion'; //Estilos para la sección "nuestra selección"
 @use 'componentes/pieDePagina'; //Estilos para el pie de página
 @use 'global/botones'; //Estilos para botones en toda la página
-@use 'componentes/flores_sueltas'; //Estilos para la sección "flores sueltas"
+@use 'componentes/catalogo_floristeria'; //Estilos para la sección "flores sueltas"

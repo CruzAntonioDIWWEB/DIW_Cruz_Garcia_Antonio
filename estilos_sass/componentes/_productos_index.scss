@@ -53,7 +53,7 @@
 }
 
 //Utilizo grid para posicionar los productos, se ajustan según el tamaño de la pantalla
-.productos_grid {
+.productos_principales {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr; //Una sola columna para moviles
