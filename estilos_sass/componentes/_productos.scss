@@ -110,7 +110,6 @@
         border-radius: 5px;
         font-weight: bold;
         z-index: 2; //posiciono el botón sobre la imagen
-        transition: transform 0.3s ease;
 
         &:hover {
             background-color: darken(map-get(variables.$colores, color-boton), 10%);
