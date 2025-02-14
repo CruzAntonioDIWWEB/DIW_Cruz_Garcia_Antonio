@@ -117,13 +117,11 @@
         h2 {
             font-family: map-get(variables.$tipografias, fuente-titulos);
             font-size: 1.2rem;
-            color: map-get(variables.$colores, color-texto);
             margin-bottom: 0.5rem;
         }
     
         p {
             font-family: map-get(variables.$tipografias, fuente-texto);
-            color: map-get(variables.$colores, color-texto-secundario);
             margin-bottom: 1rem;
         }
     
@@ -140,6 +138,10 @@
 
         &.celebraciones{
             background-color: map-get(variables.$colores, color-primario);
+        }
+
+        &.condolencias{
+            background-color: map-get(variables.$colores, color-secundario);
         }
     }
 }
@@ -167,6 +169,13 @@
     h1 {
         flex: 1;
         justify-content: flex-start;
+    }
+
+    &.condolencias{
+        background-color: map-get(variables.$colores, color-primario);
+        h1{
+            color: map-get(variables.$colores, color-secundario);
+        }
     }
 }
 
@@ -214,4 +223,12 @@
         line-height: 1.6;
         margin: 0;
     }
+
+    &.condolencias{
+        background-color: map-get(variables.$colores, color-primario);
+        h1{
+            color: map-get(variables.$colores, color-secundario);
+        }
+    }
+
 }

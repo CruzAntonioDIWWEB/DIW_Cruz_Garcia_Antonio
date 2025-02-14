@@ -729,6 +729,9 @@ img {
 .contenedor_producto .detalles_producto.celebraciones {
   background-color: #A3B18A;
 }
+.contenedor_producto .detalles_producto.condolencias {
+  background-color: #D9CAB3;
+}
 
 .texto_secciones_especiales {
   display: flex;
@@ -752,6 +755,12 @@ img {
 .texto_secciones_especiales h1 {
   flex: 1;
   justify-content: flex-start;
+}
+.texto_secciones_especiales.condolencias {
+  background-color: #A3B18A;
+}
+.texto_secciones_especiales.condolencias h1 {
+  color: #D9CAB3;
 }
 
 .productos_principales_especiales {
@@ -797,4 +806,10 @@ img {
   font-family: "Roboto, sans-serif";
   line-height: 1.6;
   margin: 0;
+}
+.texto_secciones_especiales_2_parrafo.condolencias {
+  background-color: #A3B18A;
+}
+.texto_secciones_especiales_2_parrafo.condolencias h1 {
+  color: #D9CAB3;
 }/*# sourceMappingURL=main.css.map */
