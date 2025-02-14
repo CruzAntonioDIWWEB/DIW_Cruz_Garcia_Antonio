@@ -22,7 +22,7 @@
     h1 {
         font-family: map-get(variables.$tipografias, fuente-titulos);
         text-align: center;
-        color: map-get(variables.$colores, color-primario);
+        color: darken(map-get(variables.$colores, color-primario), 5%);
         font-size: 2.5rem;
         position: relative;
         margin-bottom: 1rem;
