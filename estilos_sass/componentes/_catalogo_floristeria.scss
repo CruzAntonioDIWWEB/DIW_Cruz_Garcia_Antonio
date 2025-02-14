@@ -25,6 +25,7 @@
         color: map-get(variables.$colores, color-primario);
         font-size: 2.5rem;
         position: relative;
+        margin-bottom: 1rem;
     }
 }
 
@@ -79,6 +80,10 @@
     @include puntoRuptura("pantalla-peque") {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    &.celebraciones{
+        background-color: map-get(variables.$colores, color-neutro-gr);
+    }
 }
 
 .contenedor_producto {
@@ -132,5 +137,81 @@
             font-weight: bold;
             align-self: center;
         }
+
+        &.celebraciones{
+            background-color: map-get(variables.$colores, color-primario);
+        }
+    }
+}
+
+.texto_secciones_especiales {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    background-color: map-get(variables.$colores, color-secundario);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+
+    p {
+        justify-content: flex-end;
+        align-self: center;
+        flex:2;
+        font-family: map-get(variables.$tipografias, fuente-texto);
+        line-height: 1.6;
+    }
+
+    h1 {
+        flex: 1;
+        justify-content: flex-start;
+    }
+}
+
+.productos_principales_especiales{
+        display: grid;
+        gap: 2rem;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 1rem;
+    
+        @include puntoRuptura("tableta") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        @include puntoRuptura("pantalla-peque") {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+}
+
+.texto_secciones_especiales_2_parrafo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: map-get(variables.$colores, color-secundario);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+    
+    h1 {
+        order: 2; // Mueve el título a la derecha
+        text-align: right;
+        flex: 1; // Ocupa espacio proporcionalmente
+    }
+
+    p {
+        order: 1; // Mueve el texto a la izquierda
+        text-align: left;
+        flex: 2; // Ocupa más espacio que el título para un mejor diseño
+        font-family: map-get(variables.$tipografias, fuente-texto);
+        line-height: 1.6;
+        margin: 0;
     }
 }
