@@ -1,9 +1,10 @@
 //Estilos para la cabecera de la página, incluye el logotipo y el menú de navegación
 @use '../global/variables';
 @use '../global/mixins' as *;
+@use '../global/funciones' as f;
 
 .cabecera {
-    background-color: map-get(variables.$colores, color-primario);
+    background-color: f.colores("color-primario");
     padding: 1rem 2rem; //espacio de los elementos internos
 
     //Estilo para el contenedor del menú utilizando flex
@@ -76,17 +77,18 @@
 
 //Estilos para el menú de navegación utilizando flex
 .menu_navegacion {
+    font-family: f.tipografias("fuente-titulos");
     display: flex;
     gap: 2rem;
     list-style: none; //quito los puntos de la lista
 
     //Estilo para los elementos de la lista
     li a {
-        color: map-get(variables.$colores, color-neutro-bl);
+        color: f.colores("color-neutro-bl");
         text-decoration: none;
 
         &:hover {
-            color: map-get(variables.$colores, color-boton); //cambio el color al pasar el ratón por encima
+            color: f.colores("color-boton"); //cambio el color al pasar el ratón por encima
         }
 
         //Tamaño de la fuente para diferentes resoluciones

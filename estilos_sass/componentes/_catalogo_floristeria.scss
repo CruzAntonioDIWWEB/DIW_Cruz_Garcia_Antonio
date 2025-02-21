@@ -1,5 +1,6 @@
 @use '../global/variables';
 @use '../global/mixins' as *;
+@use '../global/funciones' as f;
 
 .introduccion_a_seccion {
     display: flex;
@@ -9,7 +10,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: map-get(variables.$colores, color-fondo);
+    background-color: f.colores("color-neutro-bl");
 
     @include puntoRuptura("tableta") {
         padding: 3rem 2rem;
@@ -20,9 +21,9 @@
     }
 
     h1 {
-        font-family: map-get(variables.$tipografias, fuente-titulos);
+        font-family: f.tipografias("fuente-titulos");
         text-align: center;
-        color: darken(map-get(variables.$colores, color-primario), 5%);
+        color: f.oscurecer(f.colores("color-primario"));
         font-size: 2.5rem;
         position: relative;
         margin-bottom: 1rem;
@@ -30,7 +31,7 @@
 }
 
 .texto_introduccion {
-    background-color: map-get(variables.$colores, color-secundario);
+    background-color: f.colores("color-secundario");
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -38,7 +39,7 @@
     max-width: 800px;
 
     p {
-        font-family: map-get(variables.$tipografias, fuente-texto);
+        font-family: f.tipografias("fuente-texto");
         text-align: center;
         line-height: 1.6;
         margin: 0;
@@ -50,16 +51,15 @@
     margin-bottom: 2rem;
 
     .boton-filtrar {
-        background-color: map-get(variables.$colores, color-boton);
-        color: map-get(variables.$colores, color-neutro-bl);
+        background-color: f.colores("color-boton");
+        color: f.colores("color-neutro-bl");
         padding: 0.75rem 2.5rem;
         border: none;
         border-radius: 5px;
-        font-family: map-get(variables.$tipografias, fuente-cta);
         font-weight: bold;
 
         &:hover {
-            background-color: darken(map-get(variables.$colores, color-boton), 10%);
+            background-color: f.oscurecer(f.colores("color-boton"));
         }
     }
 }
@@ -70,7 +70,7 @@
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 1rem;
-    background-color: map-get(variables.$colores, color-primario);
+    background-color: f.colores("color-primario");
     border-radius: 15px;
 
     @include puntoRuptura("tableta") {
@@ -82,14 +82,14 @@
     }
 
     &.celebraciones{
-        background-color: map-get(variables.$colores, color-neutro-gr);
+        background-color: f.colores("color-neutro-gr");
     }
 }
 
 .contenedor_producto {
     display: flex;
     flex-direction: column;
-    background-color: map-get(variables.$colores, color-secundario);
+    background-color: f.colores("color-secundario");
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -115,19 +115,19 @@
         height: 100%; /* Asegura que los elementos se distribuyan de manera uniforme en el contenedor */
     
         h2 {
-            font-family: map-get(variables.$tipografias, fuente-titulos);
+            font-family: f.tipografias("fuente-titulos");
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
     
         p {
-            font-family: map-get(variables.$tipografias, fuente-texto);
+            font-family: f.tipografias("fuente-texto");
             margin-bottom: 1rem;
         }
     
         .precio {
-            background-color: map-get(variables.$colores, color-neutro-gr);
-            color: map-get(variables.$colores, color-boton);
+            background-color: f.colores("color-neutro-gr");
+            color: f.colores("color-boton");
             padding: 0.5rem 0.75rem;
             border-radius: 10px;
             font-family: map-get(variables.$tipografias, fuente-cta);
@@ -137,11 +137,11 @@
         }
 
         &.celebraciones{
-            background-color: map-get(variables.$colores, color-primario);
+            background-color: f.colores("color-primario");
         }
 
         &.condolencias{
-            background-color: map-get(variables.$colores, color-secundario);
+            background-color: f.colores("color-secundario");
         }
     }
 }
@@ -150,7 +150,7 @@
     display: flex;
     flex-direction: row;
     align-content: space-around;
-    background-color: map-get(variables.$colores, color-secundario);
+    background-color: f.colores("color-secundario");
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -162,7 +162,7 @@
         justify-content: flex-end;
         align-self: center;
         flex:2;
-        font-family: map-get(variables.$tipografias, fuente-texto);
+        font-family: f.tipografias("fuente-texto");
         line-height: 1.6;
     }
 
@@ -172,9 +172,9 @@
     }
 
     &.condolencias{
-        background-color: map-get(variables.$colores, color-primario);
+        background-color: f.colores("color-primario");
         h1{
-            color: map-get(variables.$colores, color-secundario);
+            color: f.colores("color-secundario");
         }
     }
 }
@@ -201,7 +201,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: map-get(variables.$colores, color-secundario);
+    background-color: f.colores("color-secundario");
     padding: 2rem;
     border-radius: 15px;
     margin-bottom: 2rem;
@@ -219,15 +219,15 @@
         order: 1; // Mueve el texto a la izquierda
         text-align: left;
         flex: 2; // Ocupa más espacio que el título para un mejor diseño
-        font-family: map-get(variables.$tipografias, fuente-texto);
+        font-family: f.tipografias("fuente-texto");
         line-height: 1.6;
         margin: 0;
     }
 
     &.condolencias{
-        background-color: map-get(variables.$colores, color-primario);
+        background-color: f.colores("color-primario");
         h1{
-            color: map-get(variables.$colores, color-secundario);
+            color: f.colores("color-secundario");
         }
     }
 

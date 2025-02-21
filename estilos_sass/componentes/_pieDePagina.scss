@@ -1,9 +1,10 @@
 //Esitlos del pie de página incluye el logotipo y enlaces importantes
 @use '../global/variables';
 @use '../global/mixins' as *;
+@use '../global/funciones' as f;
 
 .pie_pagina {
-    background-color: map-get(variables.$colores, color-primario);
+    background-color: f.colores("color-primario");
     padding: 1rem 2rem; //Espacio de los elementos internos
 
     //Estilo para el contenedor del pie de página utilizando flex
@@ -70,16 +71,17 @@
 
 //Estilos para los enlaces del pie de página
 .menu_navegacion {
+    font-family: f.tipografias("fuente-titulos");
     display: flex;
     gap: 2rem;
     list-style: none;
 
     li a {
-        color: map-get(variables.$colores, color-neutro-bl);
+        color: f.colores("color-neutro-bl");
         text-decoration: none;
 
         &:hover {
-            color: map-get(variables.$colores, color-boton); //cambio el color al pasar el ratón por encima
+            color: f.colores("color-boton"); //cambio el color al pasar el ratón por encima
         }
 
         @include puntoRuptura("pantalla-peque") {

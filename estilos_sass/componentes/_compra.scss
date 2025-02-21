@@ -1,0 +1,108 @@
+@use '../global/variables';
+@use '../global/mixins' as *;
+
+.contenedor {
+    background-color: map-get(variables.$colores, color-neutro-gr);
+    
+    &_compra {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+
+        // CAMBIA LOS PUNTOS DE RUPTURA
+        @include puntoRuptura('tableta') {
+            grid-template-columns: 50% 50%;
+        }
+
+        @include puntoRuptura('escritorio') {
+            grid-template-columns: 45% 55%;
+        }
+    }
+
+    &_imagenes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    &_imagen-principal {
+        width: 100%;
+        height: auto;
+        border: 1px solid darken(map-get(variables.$colores, color-neutro-gr), 5%);
+    }
+
+    &_miniaturas {
+        display: flex;
+        gap: 1rem;
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid darken(map-get(variables.$colores, color-neutro-gr), 5%);
+        }
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    &_titulo {
+        font-family: map-get(variables.$tipografias, fuente-titulos);
+        color: map-get(variables.$colores, color-primario);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &_descripcion {
+        font-family: map-get(variables.$tipografias, fuente-texto);
+        color: #666;
+        line-height: 1.5;
+    }
+
+    &_acciones {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    &_cantidad {
+        width: 80px;
+        height: 2.5rem;
+        text-align: center;
+        border: 1px solid darken(map-get(variables.$colores, color-neutro-gr), 10%);
+    }
+
+    .boton-comprar {
+        flex-grow: 1;
+        padding: 1rem;
+        max-width: 200px;
+    }
+}
+
+// Estilos responsivos
+@include puntoRuptura('movil') {
+    .contenedor {
+        &_compra {
+            grid-template-columns: 1fr;
+        }
+
+        &_imagenes, &_info {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        &_miniaturas img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}

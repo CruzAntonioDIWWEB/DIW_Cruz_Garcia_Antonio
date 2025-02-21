@@ -1,4 +1,12 @@
-//Definición de las variables utilizadas en el proyecto
+//Importo la fuente Roboto desde googleFonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+//Definición de las diferentes tipografías
+$tipografias: (
+    fuente-titulos: 'Playfair Display, serif',
+    fuente-texto: 'Roboto, sans-serif',
+    fuente-cta: 'Poppins, sans-serif'
+);
 
 //Definición de los puntos de ruptura
 $breakpoints: (
@@ -19,9 +27,3 @@ $colores: (
     color-neutro-gr: #E5E5E5
 );
 
-//Definición de las diferentes tipografías
-$tipografias: (
-    fuente-titulos: 'Playfair Display, serif',
-    fuente-texto: 'Roboto, sans-serif',
-    fuente-cta: 'Poppins, sans-serif'
-    )

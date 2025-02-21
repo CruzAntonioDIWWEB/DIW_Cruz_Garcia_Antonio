@@ -1,6 +1,7 @@
 //Estilos para la sección de productos destacados y novedades
 @use '../global/variables';
 @use '../global/mixins' as *;
+@use '../global/funciones' as f;
 
 //Estilos generales para los productos destacados y novedades
 .productos_destacados,
@@ -31,9 +32,9 @@
 
     //Estilos para los encabezados de productos destacados y novedades
     h2 {
-        font-family: map-get(variables.$tipografias, fuente-titulos);
+        font-family: f.tipografias("fuente-titulos");
         text-align: center;
-        color: map-get(variables.$colores, color-primario);
+        color: f.colores("color-primario");
         margin-bottom: 2rem;
         font-size: 1.6rem; //base para movil
 
@@ -89,7 +90,7 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    background-color: map-get(variables.$colores, color-neutro-bl);
+    background-color: f.colores("color-neutro-bl");
 
     picture {
         display: block;
@@ -104,15 +105,15 @@
         left: 1rem;
         width: calc(100% - 7rem); //ancho del botón ajustado para dejar espacio al precio
         padding: 0.75rem 1rem;
-        background-color: map-get(variables.$colores, color-boton);
-        color: map-get(variables.$colores, color-neutro-bl);
+        background-color: f.colores("color-boton");
+        color: f.colores("color-neutro-bl");
         border: none;
         border-radius: 5px;
         font-weight: bold;
         z-index: 2; //posiciono el botón sobre la imagen
 
         &:hover {
-            background-color: darken(map-get(variables.$colores, color-boton), 10%);
+            background-color: f.oscurecer(f.colores("color-boton"));
         }
     }
 
@@ -120,11 +121,11 @@
         position: absolute;
         bottom: 1rem;
         right: 1rem;
-        background-color: map-get(variables.$colores, color-neutro-bl);
-        color: map-get(variables.$colores, color-primario);
+        background-color: f.colores("color-neutro-bl");
+        color: f.colores("color-primario");
         padding: 0.75rem 1rem;
         border-radius: 5px;
-        font-family: map-get(variables.$tipografias, fuente-cta);
+        font-family: f.tipografias("fuente-cta");
         font-weight: bold;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 2; //posiciono el precio sobre la imagen

@@ -1,6 +1,7 @@
 //Estilos para la imagen héroe y el texto de bienvenida
 @use '../global/variables';
 @use '../global/mixins' as *;
+@use '../global/funciones' as f;
 
 //Contenedor de la sección héroe, utilizo una imagen de fondo
 .seccion_heroe {
@@ -19,11 +20,11 @@
 .texto_heroe {
     position: relative;
     text-align: center;
-    color: map-get(variables.$colores, color-neutro-bl);
+    color: f.colores("color-neutro-bl");
     z-index: 1; //texto sobre la imagen
 
     h1 {
-        font-family: map-get(variables.$tipografias, fuente-titulos);
+        font-family: f.tipografias("fuente-titulos");
         font-size: 2rem;
 
         //Diferentes tamaños de fuente según el tamaño de la pantalla
@@ -49,7 +50,7 @@
     }
 
     h3 {
-        font-family: map-get(variables.$tipografias, fuente-texto);
+        font-family: f.tipografias("fuente-titulos");
         font-size: 1.5rem;
 
         @include puntoRuptura("movil") {
